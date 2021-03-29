@@ -1,0 +1,18 @@
+/* Object: This is cal that calculates control action
+   to be taken by the valve*/
+FLOAT KeVECI_phi_HSE_MsrdPstn = 20;
+
+/* Object: This is cal that calculates feedback position
+   of the valve*/
+INT KeVECI_i_HSE_DstrbnMd = 4;
+
+
+FLOAT KtVECI_cmp_HSE_FwdDecCPO = {120, 130, 10, 20,
+50, 80, 90, 100, 420, 600};
+
+/* Object: This is another random ass calibration that
+   i made up with out thinking much*/
+TbBOOLEAN KeVECI_b_HSE_DrvrOn = CbTRUE;
+
+FLOAT KtVECI_phi_HSE_FwdDecAngleasdas = {1.1, 1.4, 1.9, 2.0, 4.5,
+                                    5.6, 8.8, 9.9, 10};
