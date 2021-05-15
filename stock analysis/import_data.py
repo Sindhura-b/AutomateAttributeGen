@@ -26,10 +26,10 @@ df = pd.DataFrame(data, columns=['Ticker', 'Buy zone target 3', 'Buy zone target
 for key, value in df.iterrows():
     #print(value['Ticker'])
     curr_value = get_symbol_value_by_date(str(value['Ticker']), date=datetime.datetime.now())
-    print(curr_value)
-    if curr_value <= value['Buy zone target 3'] and curr_value >= value['Buy zone target 2']:
+    print(curr_value, value['Buy zone target 3'])
+    if float(curr_value) <= float(value['Buy zone target 3']) and float(curr_value) >= float(value['Buy zone target 2']):
         print('Buy')
-    elif curr_value <= value['Buy zone target 2'] and curr_value >= value['Buy zone target 1']:
+    elif float(curr_value) <= float(value['Buy zone target 2']) and float(curr_value) >= float(value['Buy zone target 1']):
         print('Strong Buy')
     else:
         print('Wait')
